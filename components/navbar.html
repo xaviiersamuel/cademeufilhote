@@ -1,0 +1,51 @@
+<header class="topbar fixed-top">
+  <div class="container-fluid d-flex align-items-center justify-content-between">
+    <a class="brand d-flex align-items-center text-decoration-none" href="index.php">
+      <img src="assets/img/logo.svg" alt="Logo" class="logo" />
+      <h1>Cadê meu filhotinho?</h1>
+    </a>
+    <div class="d-flex align-items-center gap-3">
+      <button class="btn help-btn" data-bs-toggle="modal" data-bs-target="#helpModal">Precisa de Ajuda?</button>
+      <button class="icon-btn" id="profileBtn"><img src="assets/img/user-icon.svg" alt="Usuário"></button>
+      <button class="btn btn-outline-secondary d-lg-none" data-bs-toggle="offcanvas" data-bs-target="#mobileMenu">☰</button>
+    </div>
+  </div>
+</header>
+
+<div class="offcanvas offcanvas-start" tabindex="-1" id="mobileMenu">
+  <div class="offcanvas-body">
+    <nav class="side-menu"></nav>
+  </div>
+</div>
+
+<div class="modal fade" id="profileModal" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content profile-modal">
+      <div class="modal-body text-center">
+        <img src="assets/img/user-icon.svg" alt="Perfil" class="profile-pic">
+        <h4 id="modal-user-nome">Raul Teixeira</h4>
+        <p id="modal-user-info">Email: raul@email.com<br>Membro desde: 2024</p>
+        <button type="button" class="btn-logout" onclick="location.href='logout.php'">Desconectar</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="helpModal" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" style="max-width: 380px;"> 
+    <div class="modal-content profile-modal">
+      <div class="modal-body text-center p-4"> 
+        
+        <h4 class="mb-3" style="font-family: 'Hanken Grotesk', sans-serif; color: #4a4a4a; font-weight: 700; font-size: 28px;">Contate-nos</h4>
+        
+        <p style="font-family: 'Nunito', sans-serif; font-size: 16px; color: #474747; line-height: 1.8; margin-bottom: 0;">
+          carolina2008barcelos@gmail.com<br>
+          angeloaugustocf@gmail.com<br>
+          ingrydmarques.tech@gmail.com<br>
+          samuelcardoso@gmail.com
+        </p>
+        
+      </div>
+    </div>
+  </div>
+</div>

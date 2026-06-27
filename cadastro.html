@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cadê meu filhotinho? - Cadastro</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,500;1,500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,600;1,600&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      min-height: 100vh;
+      margin: 0;
+      background: #e7e7e7;
+      color: #4d4d4d;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .signup-page {
+      width: 100%;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 30px 16px;
+    }
+
+    #signup-title{
+      font-family: "Hanken Grotesk", sans-serif;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      margin-bottom: 36px;
+    }
+
+    .brand img {
+      width: 60px;
+      height: 56px;
+      object-fit: contain;
+    }
+
+    .brand h1 {
+      margin: 0;
+      color: #4f4f4f;
+      font-size: 28px;
+      font-weight: 700;
+      line-height: 1;
+      letter-spacing: 0;
+    }
+
+    .signup-card {
+      width: 400px;
+      min-height: 390px;
+      padding: 25px 31px 28px;
+      background: #ffffff;
+      border: 1px solid #d6d6d6;
+      border-radius: 16px;
+      box-shadow: 0 2px 2px rgba(0, 0, 0, 0.08);
+    }
+
+    .signup-card h2 {
+      max-width: 250px;
+      margin: 0 0 34px;
+      color: #555555;
+      font-size: 26px;
+      font-weight: 400;
+      line-height: 1.2;
+      letter-spacing: 0;
+    }
+
+    #form-cadastro{
+      display: flex;
+      flex-direction:column;
+      gap: 5px;
+    }
+
+    .field {
+      margin-bottom: 7px;
+    }
+
+    .field label {
+      display: block;
+      margin-bottom: 3px;
+      color: #444444;
+      font-size: 14px;
+      line-height: 1;
+      font-family: "Nunito", sans-serif;
+    }
+
+    .field input {
+      display: block;
+      width: 100%;
+      height: 18px;
+      padding: 2px 6px;
+      border: none;
+      border-radius: 3px;
+      outline: none;
+      background: #d9d9d9;
+      color: #222222;
+      font: 12px Arial, Helvetica, sans-serif;
+    }
+
+    .field input:focus {
+      box-shadow: 0 0 0 1px #bdbdbd inset;
+    }
+
+    .submit-button {
+      display: block;
+      width: 88px;
+      height: 24px;
+      margin: 18px auto 0;
+      border: none;
+      border-radius: 3px;
+      background: #d9d9d9;
+      color: #3f3f3f;
+      font-size: 12px;
+      cursor: pointer;
+      font-family: Nunito, sans-serif;
+    }
+
+    @media (max-width: 420px) {
+      .signup-page {
+        padding-top: 28px;
+      }
+
+      .brand {
+        gap: 10px;
+        margin-bottom: 30px;
+      }
+
+      .brand img {
+        width: 52px;
+        height: 50px;
+      }
+
+      .brand h1 {
+        font-size: 23px;
+      }
+
+      .signup-card {
+        width: min(400px, 100%);
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="signup-page">
+    <a href="index.php" class="brand" style="text-decoration: none;" aria-label="Cadê meu filhotinho?">
+      <img src="assets/img/logo.svg" alt="Logo Cadê meu filhotinho?" />
+      <h1>Cadê meu filhotinho?</h1>
+    </a>
+
+    <section class="signup-card" aria-labelledby="signup-title">
+      <h2 id="signup-title">Ainda não tem conta? Crie uma</h2>
+
+      <form id="form-cadastro" action="processa_cadastro.php" method="post">
+        <div class="field">
+          <label for="nome">Nome completo:</label>
+          <input id="nome" name="nome" type="text" autocomplete="name" required />
+        </div>
+
+        <div class="field">
+          <label for="telefone">Telefone de contato:</label>
+          <input id="telefone" name="telefone" type="tel" autocomplete="tel" required />
+        </div>
+
+        <div class="field">
+          <label for="email">Email:</label>
+          <input id="email" name="email" type="email" autocomplete="email" required />
+        </div>
+
+        <div class="field">
+          <label for="senha">Crie uma senha:</label>
+          <input id="senha" name="senha" type="password" autocomplete="new-password" required />
+        </div>
+
+        <button class="submit-button" type="submit">Cadastrar</button>
+      </form>
+
+      <p class="signup-text" style="margin-top: 20px; text-align: center; font-size: 11px; font-family: Nunito, sans-serif;">
+        Ou se preferir, navegue no modo <a href="index.php" style="color: #238bb4; text-decoration: none;">visitante</a>
+      </p>
+      
+    </section>
+  </main>
+</body>
+</html>

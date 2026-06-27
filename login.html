@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cadê meu filhotinho? - Login</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,500;1,500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,600;1,600&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      min-height: 100vh;
+      margin: 0;
+      background: #e7e7e7;
+      color: #4d4d4d;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .login-page {
+      width: 100%;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 30px 16px;
+    }
+
+    #login-title{
+      font-family: "Hanken Grotesk", sans-serif;
+      font-size: 30px;
+      margin-bottom: 50px;
+      margin-top: 10px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      margin-bottom: 36px;
+    }
+
+    .brand img {
+      width: 60px;
+      height: 56px;
+      object-fit: contain;
+    }
+
+    .brand h1 {
+      margin: 0;
+      color: #4f4f4f;
+      font-size: 28px;
+      font-weight: 700;
+      line-height: 1;
+      letter-spacing: 0;
+    }
+
+    .login-card {
+      width: 400px;
+      min-height: 390px;
+      padding: 24px 31px 28px;
+      background: #ffffff;
+      border: 1px solid #d6d6d6;
+      border-radius: 16px;
+      box-shadow: 0 2px 2px rgba(0, 0, 0, 0.08);
+    }
+
+    .login-card h2 {
+      margin: 0 0 48px;
+      color: #555555;
+      font-size: 26px;
+      font-weight: 400;
+      line-height: 1;
+      letter-spacing: 0;
+    }
+    
+    #email{
+      margin-bottom: 10px;
+    }
+
+    #senha{
+      margin-bottom: 40px;
+    }
+
+    .field {
+      margin-bottom: 7px;
+    }
+
+    .field label {
+      display: block;
+      margin-bottom: 3px;
+      color: #444444;
+      font-size: 15px;
+      line-height: 1;
+      font-family: "Nunito", sans-serif;
+    }
+
+    .field input {
+      display: block;
+      width: 100%;
+      height: 18px;
+      padding: 2px 6px;
+      border: none;
+      border-radius: 3px;
+      outline: none;
+      background: #d9d9d9;
+      color: #222222;
+      font: 12px Arial, Helvetica, sans-serif;
+    }
+
+    .field input:focus {
+      box-shadow: 0 0 0 1px #bdbdbd inset;
+    }
+
+    .submit-button {
+      display: block;
+      width: 88px;
+      height: 24px;
+      margin: 20px auto 30px;
+      border: none;
+      border-radius: 3px;
+      background: #d9d9d9;
+      color: #3f3f3f;
+      font-size: 12px;
+      cursor: pointer;
+      font-family: Nunito, sans-serif;
+    }
+
+    .signup-text {
+      margin: 0;
+      color: #000000;
+      font-size: 11px;
+      line-height: 1.2;
+      text-align: center;
+      font-family: Nunito, sans-serif;
+    }
+
+    .signup-text a {
+      color: #238bb4;
+      text-decoration: none;
+    }
+
+    .signup-text a:hover,
+    .signup-text a:focus {
+      text-decoration: underline;
+    }
+
+    @media (max-width: 420px) {
+      .login-page {
+        padding-top: 28px;
+      }
+
+      .brand {
+        gap: 10px;
+        margin-bottom: 30px;
+      }
+
+      .brand img {
+        width: 52px;
+        height: 50px;
+      }
+
+      .brand h1 {
+        font-size: 23px;
+      }
+
+      .login-card {
+        width: min(400px, 100%);
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="login-page">
+    <a href="index.php" class="brand" style="text-decoration: none;" aria-label="Cadê meu filhotinho?">
+      <img src="assets/img/logo.svg" alt="Logo Cadê meu filhotinho?" />
+      <h1>Cadê meu filhotinho?</h1>
+    </a>
+
+    <section class="login-card" aria-labelledby="login-title">
+      <h2 id="login-title">Faça o login</h2>
+
+      <form id="form-login" action="processa_login.php" method="post">
+        <div class="field">
+          <label for="email">Email:</label>
+          <input id="email" name="email" type="email" autocomplete="email" required />
+        </div>
+
+        <div class="field">
+          <label for="senha">Senha:</label>
+          <input id="senha" name="senha" type="password" autocomplete="current-password" required />
+        </div>
+
+        <button class="submit-button" type="submit">Entrar</button>
+      </form>
+
+      <p class="signup-text">
+        Ainda não tem conta? <a href="cadastro.html">Clique aqui</a>
+      </p>
+      <p class="signup-text" style="margin-top: 12px;">
+        Quero acessar no modo <a href="index.php">visitante</a>
+      </p>
+    </section>
+  </main>
+</body>
+</html>
