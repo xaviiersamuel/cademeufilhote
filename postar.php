@@ -23,7 +23,7 @@ if (!isset($_SESSION['usuario_id'])) {
 
   <div class="layout container-fluid">
     <div class="row g-0">
-      <aside id="sidebar-left-container" class="col-lg-3 left-col d-none d-lg-block"></aside>
+      <aside id="sidebar-left-container" class="col-lg-3 left-col d-none d-xl-block"></aside>
 
       <main class="col-12 col-lg-5 content-col">
         <section class="post-card">
@@ -71,8 +71,6 @@ if (!isset($_SESSION['usuario_id'])) {
           </label><button class="publish-btn mt-3" id="publishBtn">Publicar</button>
         </section>
       </main>
-
-      <aside id="sidebar-right-container" class="col-lg-4 right-col d-none d-lg-block" data-sidebar-variant="share"></aside>
     </div>
   </div>
 

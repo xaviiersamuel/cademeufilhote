@@ -49,6 +49,23 @@ body {
 .icon-btn img {
   width: 74px;
 }
+::-webkit-scrollbar {
+    width: 6px;
+}
+
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgb(25, 182, 200);
+    border-radius: 999px;
+    transition: background 0.3s ease;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: rgb(25, 182, 200);
+}
 .layout {
   box-sizing: border-box;
   height: 100vh;
@@ -86,7 +103,8 @@ body:has(#publishBtn) .layout > .row {
   flex-direction: column;
   gap: 10px; 
   align-items: flex-start;
-  margin-left: 10px;
+  margin-left: 30px;
+  margin-top: 60px;
 }
 .menu-link {
   display: flex;
@@ -94,8 +112,8 @@ body:has(#publishBtn) .layout > .row {
   flex-wrap: wrap;
   gap: 8px;
   width: 100%;
-  height: 90px;
-  max-width: 280px;
+  height: 100px;
+  max-width: 300px;
   min-height: 46px;
   padding: 10px 16px;
   border-radius: 999px;
@@ -115,11 +133,11 @@ body:has(#publishBtn) .layout > .row {
 .menu-text {
   flex: 1 1 0;
   min-width: 0;
-  font-size: 25px;
+  font-size: 27px;
   font-family: "Nunito", sans-serif;
 }
 .content-col {
-  padding: 14px 10px 20px;
+  
 }
 #feed{
   display: flex;
@@ -156,6 +174,7 @@ body:has(#publishBtn) .layout > .row {
   border: 1px solid #d0d0d0;
   padding: 16px;
   margin-top: 14px;
+  overflow: hidden;
 }
 .post-header {
   display: flex;
@@ -378,18 +397,37 @@ body:has(#publishBtn) .layout > .row {
 .info-article {
   max-height: calc(100vh - 160px);
   overflow: auto;
-  max-width: 620px;
+  max-width: 1000px;
 }
 .info-article h2 {
-  font-size: 49px;
-  transform: scale(0.5);
+  font-size: 37px;
   transform-origin: left top;
   line-height: 1.2;
-  margin-bottom: -60px;
+  margin: 10px;
+  margin-bottom: 25px;
+  margin-top: 15px;
+  font-family: "Hanken Grotesk", sans-serif;
+  font-weight: 700;
 }
 .info-article h4 {
+  margin: 10px;
   margin-bottom: 25px;
   margin-top: 25px;
+  font-family: "Hanken Grotesk", sans-serif;
+  font-weight: 500;
+}
+.info-article p {
+  font-family: "Hanken Grotesk", sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  margin: 10px;
+}
+.info-article li {
+  font-family: "Hanken Grotesk", sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  margin: 10px;
+  margin-top: 20px;
 }
 .author span {
   color: #1f9bc0;
@@ -401,9 +439,15 @@ body:has(#publishBtn) .layout > .row {
   width: 80px;
   margin-bottom: 10px;
 }
-@media (max-width: 991px) {
+#espaco-img{
+  margin-bottom: 30px;
+}
+@media (max-width: 1199px) {
   .content-col {
     padding: 10px;
+  }
+  .info-article{
+    margin: 0 auto;
   }
   .topbar {
     height: 90px;
@@ -413,15 +457,14 @@ body:has(#publishBtn) .layout > .row {
     padding-top: 90px;
   }
   .brand h1 {
-    font-size: 30px;
-    transform: none;
+    display: none;
   }
   .logo {
-    width: 65px;
-    height: 60px;
+    width: 68px;
+    height: 68px;
   }
-  .side-menu {
-    gap: 8px;
+  #sidebar-left-container {
+    display: none; 
   }
   .menu-link {
     max-width: 100%;

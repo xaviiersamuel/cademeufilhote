@@ -31,14 +31,12 @@
 
   <div class="layout container-fluid">
     <div class="row g-0">
-      <aside id="sidebar-left-container" class="col-lg-3 col-xl-3 left-col d-none d-lg-block"></aside>
+      <aside id="sidebar-left-container" class="col-lg-3 left-col d-none d-xl-block"></aside>
 
-      <main id="feed" class="col-12 col-lg-5 col-xl-5 content-col">
+      <main id="feed" class="col-12 col-xl-5 col-xl-5 content-col">
         <button class="post-cta" onclick="location.href='postar.php'">Quer postar algo?</button>
         <section id="feedPosts"></section>
       </main>
-
-      <aside id="sidebar-right-container" class="col-lg-4 col-xl-4 right-col d-none d-lg-block"></aside>
     </div>
   </div>
 

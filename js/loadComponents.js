@@ -8,7 +8,6 @@
   const components = [
     { id: 'navbar-container', file: 'navbar.html' },
     { id: 'sidebar-left-container', file: 'sidebar-left.html' },
-    { id: 'sidebar-right-container', file: 'sidebar-right.html' }
   ];
 
   function isRelativePath(value) {
